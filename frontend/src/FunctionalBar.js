@@ -22,7 +22,7 @@ import ChartsJS from "./Charts.js"
             <a class="navbar-brand" href="https://codingthesmartway.com" target="_blank">
              
             </a>
-            <Link to="/" className="navbar-brand">Welcome to InciDentManagement Tool </Link>
+            <Link to="/" className="navbar-brand">Welcome to IncidentManagement Tool </Link>
             {/* <div className="collpase navbar-collapse">
               <ul className="navbar-nav mr-auto">
                 <li className="navbar-item">

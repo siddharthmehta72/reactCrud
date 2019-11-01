@@ -38,7 +38,7 @@ class NavMenuBar extends Component {
   </Dropdown.Menu>
 </Dropdown>
 <Button variant="outline-primary">Related Documents</Button>
-<Button variant="outline-primary">How can i Help you ?</Button>
+<Button variant="outline-primary">How can I Help you ?</Button>
 
 
 

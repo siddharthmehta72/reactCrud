@@ -3,22 +3,16 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Pagination from "react-js-pagination";
 import { Row , Button } from 'react-bootstrap';
-import dateFormat from 'dateformat';
-import Moment from 'react-moment';
+
 const INC = props => (
-  
     <tr>
-        <td>
-        <Link to={"/read/"+props.incKey._id}>{props.incKey.INC_Number}</Link>
-        </td>
-       
-        {/* <td>dateFormat({props.incKey.INC_RaisedOn}, "dd-mm-yyyy")</td>  */}
-        <td><Moment format='DD-MM-YYYY'>{props.incKey.INC_RaisedOn}</Moment></td>
+        <td>{props.incKey.INC_Subject}</td>
+        <td>{props.incKey.INC_Description}</td>
+        <td>{props.incKey.INC_RaisedOn}</td> 
         <td>{props.incKey.INC_ImpactedApplications}</td>
         <td>{props.incKey.INC_AssignedTo}</td>
         <td>{props.incKey.INC_Type}</td>
         <td>{props.incKey.INC_Priority}</td>
-        {/* <td><Moment format='DD-MM-YYYY'>{props.incKey.INC_UpdatedOn}</Moment></td> */}
         <td>{props.incKey.INC_Status}</td>
         
         <td>
@@ -113,14 +107,13 @@ class TodoApp extends React.Component {
                 <table className="table table-striped" style={{ marginTop: 20 }} >
                     <thead>
                         <tr>
-                            <th>INC Ref</th>
-                            
+                            <th>Subject</th>
+                            <th>Description</th>
                              <th>Raised On</th> 
                             <th>Impacted Application</th>
                             <th>Assigned To</th>
                             <th>Issue Type</th>
                             <th>Priority</th>
-                            {/* <th>Last Activity</th> */}
                             <th>Current Status</th>
                         </tr>
                     </thead>
@@ -129,8 +122,8 @@ class TodoApp extends React.Component {
                     </tbody>
                 </table>
           <ul id="page-numbers">
-          <center>
-      { renderPageNumbers }</center>
+          
+      { renderPageNumbers }
     
           </ul>
         </div>
